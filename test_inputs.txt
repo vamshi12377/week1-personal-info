@@ -1,0 +1,47 @@
+# test_inputs.txt
+# Sample test cases for personal_info.py
+# Format: Input → Expected Behavior
+
+---
+
+Test 1: Normal valid input
+  Favorite Food:  Pizza
+  Favorite Color: Blue
+  Expected: Program displays all info correctly with capitalized inputs
+
+---
+
+Test 2: Empty food input, then valid
+  Favorite Food:  (press Enter with no input)
+  Favorite Food:  Pasta   ← second attempt
+  Favorite Color: Green
+  Expected: Program shows error message and re-prompts for food
+
+---
+
+Test 3: Empty color input, then valid
+  Favorite Food:  Sushi
+  Favorite Color: (press Enter with no input)
+  Favorite Color: Red     ← second attempt
+  Expected: Program shows error message and re-prompts for color
+
+---
+
+Test 4: Input with extra spaces
+  Favorite Food:     Burger   (spaces before/after)
+  Favorite Color:    Yellow
+  Expected: .strip() removes extra whitespace, program runs normally
+
+---
+
+Test 5: Lowercase input
+  Favorite Food:  pizza
+  Favorite Color: blue
+  Expected: .capitalize() converts to "Pizza" and "Blue" in output
+
+---
+
+Test 6: Very long input
+  Favorite Food:  Pepperoni and Mushroom Deep Dish Chicago Style Pizza
+  Favorite Color: Midnight Blue with a hint of Purple
+  Expected: Program handles long strings without crashing
